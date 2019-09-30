@@ -6,6 +6,7 @@ h1 {
     text-align: center;
 }
 
-#answer-header {
+#answer-p {
+    padding-top: 0.5em;
     display:none;
 }

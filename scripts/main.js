@@ -1,38 +1,26 @@
-function smallest(input1, input2, input3) {
-    const len1 = input1.length
-    const len2 = input2.length
-    const len3 = input3.length
-    
-    if (len1 <= len2 && len1 <= len3) {
-        return input1
-    } else if (len2 <= len1 && len2 <= len3) {
-        return input2
-    } else {
-        return input3
-    }
+function convertToCFromK(temperatureK) {
+    // TempC = k - 273.15
+    return (temperatureK - 273.15).toFixed(2)
 }
 
+// Update the dom with the updated answer
+// unveil the answer paragraph
 function setAnswerText(value) {
-    $("#answer").html(`${value}.`)
-    $("#answer-header").show()
+    $("#answer").html(`${value} &#8451;`)
+    $("#answer-p").show()
 }
 
 function submitButtonPressed() {
-    const input1 = $("#stringInput1").val()
-    const input2 = $("#stringInput2").val()
-    const input3 = $("#stringInput3").val()
-    console.log(input1)
-    console.log(input2)
-    console.log(input3)
-
-    const smallestInput = smallest(input1, input2, input3)
-    setAnswerText(smallestInput)
+    // Get the temperature that was put in by the user.
+    const temperatureK = parseFloat($("#input-k").val())
+    const temperatureKFixed = temperatureK.toFixed(2)
+    //console.log(temperatureKFixed)
+    const temperatureC = convertToCFromK(temperatureKFixed)
+    //console.log(temperatureC)
+    setAnswerText(temperatureC)
 }
 
-
-
+// When the submit button gets pressed
 $("#submit-button").on("click", () => {
     submitButtonPressed()
 })
-
-console.log("in page")
