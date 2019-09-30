@@ -6,7 +6,11 @@ h1 {
     text-align: center;
 }
 
-#answer-p {
+p {
     padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+#answer-p, #error-p {
     display:none;
 }

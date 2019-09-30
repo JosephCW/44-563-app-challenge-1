@@ -10,3 +10,12 @@ QUnit.test("convertToCFromK", (assert) => {
   assert.equal(exTemp2c, convertToCFromK(inTemp2k))
   assert.equal(exTemp3c, convertToCFromK(inTemp3k))
 })
+
+// QUnit.test("convertToCFromK-Throws", (assert)=> {
+//   assert.throws(
+//     ()=> {
+
+//     },
+//     new 
+//   )
+// })
