@@ -11,6 +11,10 @@ p {
     padding-bottom: 0.5em;
 }
 
+#error-p {
+    color: red;
+}
+
 #answer-p, #error-p {
     display:none;
 }

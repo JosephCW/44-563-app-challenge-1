@@ -42,7 +42,6 @@ function submitButtonPressed() {
     } catch (e) {
         setAnswerParagraphHidden(true)
         setErrorText(e.message)
-        
     }
 }
 
